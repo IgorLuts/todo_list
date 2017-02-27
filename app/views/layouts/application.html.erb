@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todolist</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all'%>
+    <%= javascript_include_tag 'application'%>
+  </head>
+
+  <body ng-app="ToDo">
+  <div class="webpage">
+ 
+    <%= yield %>
+        <footer>
+            <div class="page-footer">
+                <p>© Ruby Garage</p>
+         
+        </footer>
+        </div>
+  </body>
+</html>

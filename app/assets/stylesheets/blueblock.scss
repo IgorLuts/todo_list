@@ -1,0 +1,93 @@
+.wrapper {
+	width: 700px;
+	height: 50px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.headercyan {
+	background-image: image-url("up_cyan_line.png");
+	height: 50px;
+	width: 700px;
+}
+
+
+.task_logo {
+	float: left;
+	margin: 12px 0px 0px 15px;
+
+}
+
+
+/*Форма ввода названия TODO листа*/
+.text_cyan_header p, input[name="inputList"]
+{
+	background-image: image-url("background_form_cyan_header.png");
+	float: left;
+	color: #fff;
+	height: 22px;
+	width: 500px;
+	font-family: Arial;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 14px 0px 0px 1px;
+	padding-left: 10px;
+	border: none;
+	cursor: pointer;
+}
+/*Конец формы ввода названия TODO листа*/
+
+
+
+/*Начало кнопки редактирования*/
+.pensil_cyan_header button {
+	background-image: image-url("cyanheader1.png");
+	background-repeat: no-repeat;
+	border: none;
+	height: 32px;
+	width: 32px;
+	float: left;
+	margin: 11px 0px 0px 72px;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+.headercyan:hover .pensil_cyan_header button
+ {
+	visibility: visible;
+}
+/*Конец кнопки редактирования*/
+
+
+
+/*Начало разделительной черты*/
+.line_cyan_header {
+	float: left;
+	margin: 12px 0px 0px 2px;
+	visibility: hidden;
+}
+.headercyan:hover .line_cyan_header {
+	visibility: visible;
+}
+/*Конец разделительной черты*/
+
+
+
+/*Начало кнопки удаления*/
+.trash_cyan_header button {
+	background-image: image-url("cyanheader3.png");
+	background-repeat: no-repeat;
+	float: left;
+	height: 32px;
+	width: 32px;
+	margin: 11px 0px 0px 2px;
+	border: none;
+    cursor: pointer;
+	visibility: hidden;
+}
+.headercyan:hover .trash_cyan_header button
+{
+	visibility: visible;
+}
+/*Конец кнопки удаления*/
+/*конец синего блока*/

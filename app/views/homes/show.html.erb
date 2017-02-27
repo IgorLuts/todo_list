@@ -1,0 +1,102 @@
+ 
+<div class="main_header">
+   <div class="main_header1">
+      <div class="user">
+         <% if current_user %>
+         <div>
+            <p><%= current_user.email %></p>
+         </div>
+         <div class="logout">
+            <p><%= link_to "log out",  destroy_user_session_path, method: :delete %></p>
+         </div>
+         <% end %> 
+      </div>
+      <div class="main">
+         <p>Simple todo lists</p>
+      </div>
+      <div class="main2">
+         <p>from Ruby Garage</p>
+      </div>
+   </div>
+</div>
+
+<div class="mainblock" ng-controller = "ListController as listCtrl">
+   <!--  новый  --> 
+   <div class="margin" ng-repeat = "project in listCtrl.projects track by $index">
+      <div class="wrapper">
+         <div class="headercyan">
+            <div class="task_logo">
+            <%= image_tag("note_image_up_cyan_line.png") %>
+            </div>
+            <div class="text_cyan_header">
+               <p ng-hide="edit">{{project.name}}</p>
+               <input type="text" name="inputList" ng-enter = "listCtrl.editToDoList(project); edit = false" ng-show = "edit" ng-model = "project.name" autofocus>
+            </div>
+            <div class="pensil_cyan_header">
+               <button ng-click = "edit = true"></button>
+            </div>
+            <div class="line_cyan_header">
+               <%= image_tag("cyanheader2.png") %>
+            </div>
+            <div class="trash_cyan_header">
+               <button ng-click = "listCtrl.clickTrashList(project.id, $index)"></button>
+            </div>
+         </div>
+      </div>
+      <!-- новый 2 -->
+      <div>
+         <div class="wrapper1">
+            <div class="headergray">
+               <div class="green_plus">
+               <%= image_tag("green_plus.png") %>
+               </div>
+               <div class="form-text">
+                  <form class="form-inline">
+                     <input type="text" name="start typing here to create a task" placeholder="Start typing here to create a task" 
+                        ng-model = "listCtrl.task.name">
+                     <button class="addtask" ng-click = "listCtrl.taskAdd(project)">Add task</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+        
+      <div class="wrapper2" as-sortable="listCtrl.sortListeners" ng-model="project.tasks" >
+         <div class="listTODO"> 
+            <div class="list1" ng-repeat = "task in project.tasks" ng-controller = "TaskController as listToDo" as-sortable-item>
+               <div class="list1_1" >
+                  <input type="checkbox" ng-model='task.completed' ng-click = "listToDo.updateTask(task)">
+               </div>
+               <div class="List1_2" >
+                  <div class="list1_2_1" ng-class = "{done: task.completed}">
+                     <p class="task" ng-hide = "edit">{{task.name}}</p>
+                     <textarea type = "text" rows="1" cols="70" name="textlist1" ng-enter = "listToDo.clickEdit(task); edit = false"  ng-model = "task.name" ng-show = "edit" autofocus>{{task.name}}</textarea>
+                     <p>{{task.deadline | date}}</p>
+                  </div>
+               </div>
+               <div class='list1_3'>
+                  <button as-sortable-item-handle class="move"></button>
+                  <%= image_tag("list_line_image.png", class: "list_line_image") %>
+                  <button class="edit" ng-click = "edit = true"></button>
+                  <%= image_tag("list_line_image2.png", class: "list_line_image") %>
+                  <button class="delete" ng-click = "listToDo.clickTrash(task, project, $index)"></button>
+                  <%= image_tag("list_line_image.png", class: "list_line_image") %>
+                  <button type="button"  uib-datepicker-popup ng-model="task.deadline" is-open="datepickerOpen" class="btn btn-default timepicker" ng-click="datepickerOpen = true">
+                     <i class="glyphicon glyphicon-calendar"></i>
+                  </button>
+               </div>
+               <div style="clear:both;">
+               </div>
+            </div>
+         </div>
+      </div>
+       <!--  новый конец -->       
+      </div>
+      <!-- новый 2 конец -->
+   </div>
+   <div class="main_button" ng-click = "listCtrl.addToDolist()">
+      <button></button>
+   </div>
+   <!-- закрытие mailblock --> 
+</div>
+        
+    

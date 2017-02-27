@@ -1,0 +1,105 @@
+/*начало серого блока*/
+
+/*обертка серого блока*/
+.wrapper1 {
+	width: 700px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+
+.headergray {
+	background-image: image-url("background_gray_header.png");
+	background-repeat: repeat-x;
+	width: 700px;
+	height: 50px;
+	box-sizing: border-box;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #B3B3A3;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #B3B3A3;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #B3B3A3;
+}
+/*конец обертки серого блока*/
+
+
+/*Начало изображения "зеленый плюс" серого блока*/
+.green_plus {
+	float: left;
+	margin: 13px 0px 0px 13px;
+}
+/*Конец изображения "зеленый плюс" серого блока*/
+
+
+
+
+/*Div для верхней границы текстового поля*/
+.form-text {
+	background-color: #fff;
+	width: 626px;
+	height: 28px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #707070;
+	margin: 10px 0px 0px 15px;
+	float: left;
+	border-radius: 0px 5px 5px 0px;
+	border-bottom-style: solid;
+	border-bottom-color: #707070;
+	border-bottom-width: 1px;
+	border-left-style: solid;
+	border-left-color: #707070;
+	border-left-width: 1px;
+}
+/*конец Div для верхней границы текстового поля*/
+
+
+/*форма ввода текста*/
+.form-inline input[type=text] {
+	float: left;
+	width: 518px;
+	height: 26px;
+	font-family: Arial;
+    font-size: 14px;
+    font-weight: normal;
+    border: none;
+    padding: 0px 0px 0px 10px;
+    cursor: pointer;
+}
+/*Конец формы ввода текста*/
+
+
+/*Кнопка добавления задания*/
+.form-inline button.addtask {
+	background-image: image-url("add_task_buttom.png");
+	background-repeat: repeat-x;
+	width: 107px;
+	height: 27px;
+	float: left;
+	cursor: pointer;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 14px;
+	margin: 0px 0px 0px 0px;
+	border: none;
+    box-sizing: border-box;
+	border-left-style: solid;
+	border-left-color: #707070;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #707070;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-right-color: #707070;
+	border-right-width: 1px;
+	border-radius: 0px 4.5px 4.5px 0px;
+	color: #fff;
+}
+/*Конец кнопка добавления задания*/
+
+/*Конец серого блока*/
+

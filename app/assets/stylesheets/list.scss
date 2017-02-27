@@ -1,0 +1,308 @@
+/*Начало списка заданий*/
+
+
+/*начало обертки*/
+.wrapper2 {
+    width: 700px;
+    min-height: 0px;
+    max-height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-style: solid;
+    border-color: #B3B3A3;
+    border-width: 1px; 
+    border-top: none;
+    box-sizing: border-box;
+}
+/*конец обертки*/
+
+
+.done p {
+    text-decoration: line-through;
+}
+
+
+
+/*Обертка первого пункта списка*/
+
+.list1 {
+    width: 698px;
+    height: 100%;
+    box-sizing: border-box;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #B3B3A3;
+}
+
+
+/*Конец обертки первого пункта списка*/
+
+
+/*действие при наведении на первый пункт списка*/
+
+.list1:hover {
+    background-color: #F8F7D6;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+/*Конец действия при наведении на первый пункт списка*/
+
+.list1 .list1_1 {
+    width: 39px;
+    height: 100%;
+    float: left;
+}
+
+
+/*начало чекбокса*/
+
+.listTODO .list1 input[type=checkbox] {
+    margin: 20px 12px 0px 15px;
+    float: left;
+    cursor: pointer;
+}
+
+
+/*Конец чекбокса*/
+
+.listTODO .list1 .List1_2 {
+    width: 531px;
+    float: left;
+    height: 100%;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #EFDADF;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #B3B3A3;
+}
+
+.list1 .list1_2_1 {
+    float: left;
+    width: 525px;
+    height: 100%;
+    margin: 0px 0px 0px 5px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #EFDADF;
+}
+
+.listTODO .list1 .list1_2_1 p.task {
+    margin: 18.5px 0px 18.5px 6px;
+    font-family: Arial;
+    font-size: 13px;
+    color: #B9B9B9;
+    float: left;
+    font-weight: normal;
+    border: none;
+    text-align: left;
+    text-indent: 10px;
+    width: 415px;
+}
+
+.listTODO .list1 .list1_2_1 p.ng-binding {
+    margin: 18.5px 0px 18.5px 6px;
+    font-family: Arial;
+    font-size: 13px;
+    color: #B9B9B9;
+    float: left;
+    font-weight: normal;
+    border: none;
+    text-align: left;
+    text-indent: 10px;
+}
+
+
+/*Начало текстового поля первого пункта списка*/
+
+.listTODO .list1 .list1_2_1 textarea {
+    margin: 18.5px 0px 18.5px 6px;
+    font-family: Arial;
+    font-size: 13px;
+    color: #B9B9B9;
+    float: left;
+    font-weight: normal;
+    border: none;
+    text-align: left;
+    text-indent: 10px;
+    resize: none;
+    overflow: hidden;
+    width: 415px;
+}
+
+
+/*Конец текстового поля первого пункта списка*/
+
+
+/*Действие текстового поля при наведении на первый пункт списка*/
+
+.listTODO .list1:hover textarea {
+    background-color: #F8F7D6;
+    cursor: pointer;
+}
+
+
+/*Конец действия текстового поля при наведении на первый пункт списка*/
+
+.list1 .list1_3 {
+    width: 126px;
+    min-height: 100%;
+    float: left;
+}
+
+
+/*Кнопка перемещения первого пункта списка*/
+
+.listTODO .list1 button.move {
+    background-image: image-url("list_move_image.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 21px;
+    width: 20px;
+    border: none;
+    margin: 16px 0px 0px 6px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.listTODO .list1:hover button.move {
+    visibility: visible;
+}
+
+
+/*Конец кнопки перемещения первого пункта списка*/
+
+
+/*Линия разделитель кнопок*/
+
+.listTODO .list1 img.list_line_image {
+    height: 13px;
+    width: 1px;
+    float: left;
+    margin: 19px 0px 0px 5px;
+    visibility: hidden;
+}
+
+.listTODO .list1:hover img.list_line_image {
+    visibility: visible;
+}
+
+
+/* Конец линии разделителя кнопок*/
+
+
+/*Кнопка редактирования первого пункта списка*/
+
+.listTODO .list1 button.edit {
+    background-image: image-url("list_edit_image.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 21px;
+    width: 20px;
+    border: none;
+    margin: 16px 0px 0px 5px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.listTODO .list1:hover button.edit {
+    visibility: visible;
+}
+
+
+/*Кнопка редактирования первого пункта списка*/
+
+
+/*Линия разделитель кнопок*/
+
+.listTODO .list1 img.list_line_image2 {
+    height: 13px;
+    width: 1px;
+    float: left;
+    margin: 19px 0px 0px 5px;
+    visibility: hidden;
+}
+
+.listTODO .list1:hover img.list_line_image2 {
+    visibility: visible;
+}
+
+
+/* Конец линии разделителя кнопок*/
+
+
+/*Кнопка удаления первого пункта списка*/
+
+.listTODO .list1 button.delete {
+    background-image: image-url("list_delete_image.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 21px;
+    width: 20px;
+    border: none;
+    margin: 16px 0px 0px 5px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.listTODO .list1:hover .delete {
+    visibility: visible;
+}
+
+/*Линия разделитель кнопок*/
+
+.listTODO .list1 img.list_line_image {
+    height: 13px;
+    width: 1px;
+    float: left;
+    margin: 19px 0px 0px 5px;
+    visibility: hidden;
+}
+
+.listTODO .list1:hover img.list_line_image {
+    visibility: visible;
+}
+
+/*кнопка вызова календаря*/
+
+.timepicker {
+    padding-left: 2px !important;
+    padding-top: 0px !important;
+    float: left;
+    height: 21px;
+    width: 20px;
+    border: none;
+    margin: 16px 0px 0px 8px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.listTODO .list1:hover .glyphicon.glyphicon-calendar {
+    visibility: visible;
+}
+
+
+/*Обертка первого пункта списка*/
+
+.list2 {
+    width: 698px;
+    box-sizing: border-box;
+    border-radius: 0px 0px 7px 7px;
+}
+
+
+/*Конец обертки первого пункта списка*/
+
+
+/*действие при наведении на первый пункт списка*/
+
+.list2:hover {
+    background-color: #F8F7D6;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+/*Конец действия при наведении на первый пункт списка*/
