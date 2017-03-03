@@ -1,0 +1,66 @@
+SQL
+
+1 задача
+
+SELECT DISTINCT status
+FROM tasks
+ORDER BY status;
+
+2 задача
+
+SELECT project_id, count(project_id)
+FROM tasks
+GROUP BY project_id
+ORDER BY count(project_id) DESC;
+
+3 задача
+
+SELECT COUNT(*) AS amount, projects.name
+FROM tasks
+INNER JOIN projects
+ON project_id = projects.id
+GROUP BY projects.name
+ORDER BY projects.name ASC;
+
+4 задача
+
+SELECT * FROM tasks
+WHERE name like 'N%';
+
+5 задача
+
+SELECT projects.name, COUNT(tasks.id)
+FROM projects
+RIGHT JOIN tasks
+ON projects.id = project_id
+WHERE projects.name LIKE '%a%'
+GROUP BY projects.name;
+
+6 задача
+
+SELECT tasks.name, tasks.id
+FROM tasks
+INNER JOIN (SELECT id, name FROM tasks GROUP BY name HAVING count(id) > 1) dup
+ON tasks.name = dup.name
+ORDER BY tasks.name;
+
+7 задача
+
+SELECT *, COUNT(*) as count
+FROM tasks
+GROUP BY name, status
+HAVING count > 1
+JOIN projects ON project_id = task.project_id
+WHERE projects.name = 'Garage'
+ORDER BY count
+
+8 задача
+
+SELECT Projects.name, count(Tasks.status), Tasks.project_id
+FROM tasks
+INNER JOIN projects
+ON Tasks.project_id=Projects.id
+WHERE Tasks.status="completed"
+GROUP BY Tasks.status
+HAVING COUNT(*)>10
+ORDER BY Tasks.project_id;
